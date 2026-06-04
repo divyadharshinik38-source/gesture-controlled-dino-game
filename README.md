@@ -1,23 +1,41 @@
-# Kinect-Vision
+# Gesture-Controlled Dino Game Using Computer Vision
 
-[![HitCount](http://hits.dwyl.com/soumik12345/Kinect-Vision.svg)](http://hits.dwyl.com/soumik12345/Kinect-Vision)
+A real-time computer vision project that enables touchless gameplay of the Chrome Dino Game using hand gestures captured through a webcam. The system detects raised fingers in real time and maps gestures to keyboard actions, allowing users to control the game without touching the keyboard.
 
-A computer vision based gesture detection system that automatically detects the number of fingers as a hand gesture and enables you to control simple button pressing games using you hand gestures. Currently the system has been tested on the [**T-Rex Runner** game](http://www.trex-game.skipser.com/).
+## Features
+
+- Real-time hand gesture recognition using OpenCV
+- Finger counting based on contour analysis and convexity defects
+- Touchless game control through PyAutoGUI
+- Webcam-based gesture tracking
+- Configurable gesture-to-key mapping
+- Visual ROI (Region of Interest) tracking for gesture detection
+
+## Technologies Used
+
+- Python
+- OpenCV
+- NumPy
+- PyAutoGUI
+
+## Project Workflow
+
+1. Capture live video from webcam
+2. Detect hand region inside ROI
+3. Apply image preprocessing and thresholding
+4. Extract hand contours and convex hull defects
+5. Count raised fingers
+6. Map finger count to keyboard actions
+7. Control the Chrome Dino Game in real time
+   
+## Demo
+
+🎥 Demo Video: [https://youtu.be/your-video-id](https://www.linkedin.com/posts/divyadharshinik291126_computervision-python-opencv-ugcPost-7413110607660421120-hNjy/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFKVwnYBoZ_a7pru4c8ObXOEoHcre-9CFxA)
 
 
 ## Installation
 
-1. Clone the repo using `git clone https://github.com/soumik12345/Kinect-Vision`
-2. Use `cd Kinect-Vision` to get inside the folder
-3. Create a new conda environment using `conda create --name kinect_vision`
-4. Activate the environment using `activate kinect_vision`
-5. Install the requirements using `pip install -r requirements.txt`
+1. Clone the repository
 
-## Run The Program
-
-1. Run the program using `python3 main.py` or `python main.py` or `ipython main.py`
-2. Select the Camera port (choose `0` if you are using a laptop)
-3. Tune the upper and lower thresholds using the trackbars unless the gestures are being detected accurately enough. Ideally the lower threshold is around `130` and the upper threshold is `255`.
-4. Once the detection is working satisfactorily, switch on `Game On` and open the game window
-5. If you want to change the control scheme, you can do so by editing the `config.json` file.
-
+```bash
+git clone https://github.com/divyadharshinik38-source/gesture-controlled-dino-game.git
